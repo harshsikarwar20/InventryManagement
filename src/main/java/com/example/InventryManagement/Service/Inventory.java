@@ -21,7 +21,7 @@ public class Inventory {
     }
 
     public String addProduct(List<Product> list) {
-        for(int i=0; i<productList.size(); i++){
+        for(int i=0; i<list.size(); i++){
             productList.add(list.get(i));
         }
         return "Product has been added...";
