@@ -21,7 +21,7 @@ public class ProductController {
         return inventory.addProduct(list);
     }
 
-    @PutMapping(value = "updateQuantity/name/{name}/quantity{quantity}")
+    @PutMapping(value = "updateQuantity/name/{name}/quantity/{quantity}")
     private String updateQuantityByName(@PathVariable String name , @PathVariable int quantity){
         return inventory.updateQuantityByName(name,quantity);
     }
