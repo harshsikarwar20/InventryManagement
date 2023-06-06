@@ -9,28 +9,28 @@ import java.util.List;
 @Service
 public class Inventory {
 
-    public static ArrayList<Product> list = new ArrayList<>();
+    public static ArrayList<Product> productList = new ArrayList<>();
     static {
-        list.add(new Product("Apple",1.0,10));
-        list.add(new Product("Banana",0.5,20));
+        productList.add(new Product("Apple",1.0,10));
+        productList.add(new Product("Banana",0.5,20));
 
     }
 
     public List<Product> displayInventory() {
-        return list;
+        return productList;
     }
 
     public String addProduct(List<Product> list) {
-        for(int i=0; i<list.size(); i++){
-            list.add(list.get(i));
+        for(int i=0; i<productList.size(); i++){
+            productList.add(list.get(i));
         }
         return "Product has been added...";
     }
 
     public String updateQuantityByName(String name , int quantity) {
-        for(int i=0; i<list.size(); i++){
-            if(list.get(i).getName().equals(name)){
-                list.get(i).setQuantity(quantity);
+        for(int i=0; i<productList.size(); i++){
+            if(productList.get(i).getName().equals(name)){
+                productList.get(i).setQuantity(quantity);
                 return "product updated successfully...";
             }
         }
